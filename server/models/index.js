@@ -1,3 +1,3 @@
-import Profile from './Profile';
+const Profile = require('./Profile');
 
-export default { Profile };
+module.exports = { Profile };
