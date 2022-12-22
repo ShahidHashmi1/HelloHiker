@@ -16,22 +16,23 @@ type Trails {
 }
 
 type Query {
-    me: User
-    users: [User]!
-    user(userId: ID!): User
+    me: Profile
+    users: [Profile]!
+    user(profileId: ID!): Profile
 }
 
 type Auth {
     token: ID!
-    user: User
+    user: Profile
 }
 
 type Mutation {
 login(email: String!, password: String): Auth
 addUser(name: String!, email: String!, password: String!): Auth
-saveTrail()
-removeTrail()
+removeProfile(name: String!, email: String!, password: String!): Auth
+addTrail(profilelId: ID!): Profile
+removeTrail(profileId: ID!): Profile
 }
 `;
 
-export default {typeDefs}
+module.exports = typeDefs;
