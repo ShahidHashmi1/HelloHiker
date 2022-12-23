@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Trails } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -47,7 +47,7 @@ const resolvers = {
     // Add a third argument to the resolver to access data in our `context`
     addTrail: async (parent, { profileId, trail }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
-      if (context.user) {
+      if (context.profile) {
         return Profile.findOneAndUpdate(
           { _id: profileId },
           {
@@ -55,7 +55,6 @@ const resolvers = {
           },
           {
             new: true,
-            runValidators: true,
           }
         );
       }

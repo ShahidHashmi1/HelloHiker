@@ -15,6 +15,13 @@ type Trails {
     link: String
 }
 
+input Trail {
+    name: String!
+    description: String!
+    image: String
+    link: String
+}
+
 type Query {
     me: Profile
     users: [Profile]!
@@ -30,7 +37,7 @@ type Mutation {
 login(email: String!, password: String): Auth
 addUser(name: String!, email: String!, password: String!): Auth
 removeProfile(name: String!, email: String!, password: String!): Auth
-addTrail(profilelId: ID!): Profile
+addTrail(profileId: ID!, trail: Trail): Profile
 removeTrail(profileId: ID!): Profile
 }
 `;
