@@ -23,7 +23,7 @@ type Query {
 
 type Auth {
     token: ID!
-    user: Profile
+    profile: Profile
 }
 
 type Mutation {

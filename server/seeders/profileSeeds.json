@@ -3,106 +3,106 @@
       "name": "Brian Kernighan",
       "email": "bkernighan@techfriends.dev",
       "password": "password01",
-      "skills": [
-          "AWK",
-          "AMPL",
-          "Unix"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "Max Kanat-Alexander",
       "email": "mkanatalexander@techfriends.dev",
       "password": "password02",
-      "skills": [
-          "Java",
-          "Perl",
-          "Apache",
-          "Python"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "Amiko",
       "email": "amiko@techfriends.dev",
       "password": "password03",
-      "skills": [
-          "NodeJS",
-          "MySQL",
-          "MongoDB",
-          "React",
-          "CSS-in-JS"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "Kent Beck",
       "email": "kbeck@techfriends.dev",
       "password": "password04",
-      "skills": [
-          "Test-Driven Development",
-          "Extreme Programming",
-          "Software Design Patterns",
-          "JUnit"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "Edward V. Berard",
       "email": "evberard@techfriends.dev",
       "password": "password05",
-      "skills": [
-          "Object-Oriented Design"
+      "trails": [
+          "Appalachian"
       ]
   },
   {
       "name": "Alan Kay",
       "email": "akay@techfriends.dev",
       "password": "password06",
-      "skills": [
-          "Graphical User Interface (GUI) Design",
-          "Jazz Guitar",
-          "Education"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "C.A.R. Hoare",
       "email": "choare@techfriends.dev",
       "password": "password07",
-      "skills": [
-          "Algorithms",
-          "Quicksort",
-          "Hoare Logic"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "David Thomas",
       "email": "dthomas@techfriends.dev",
       "password": "password08",
-      "skills": [
-          "Author",
-          "Code Kata",
-          "Ruby",
-          "Pragmatic Programming"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "Donald Knuth",
       "email": "dknuth@techfriends.dev",
       "password": "password09",
-      "skills": [
-          "TeX Computer Typesetting",
-          "Algorithms",
-          "Author"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   },
   {
       "name": "Lernantino",
       "email": "lernantino@techfriends.dev",
       "password": "password10",
-      "skills": [
-          "JavaScript",
-          "CSS",
-          "HTML",
-          "Design Systems",
-          "Typescript",
-          "PWAs"
+      "trails": [
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian",
+          "Appalachian"
       ]
   }
 ]
