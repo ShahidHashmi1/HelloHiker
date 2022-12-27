@@ -63,16 +63,16 @@ const resolvers = {
     },
     // Set up mutation so a logged in user can only remove their profile and no one else's
     removeProfile: async (parent, args, context) => {
-      if (context.user) {
-        return Profile.findOneAndDelete({ _id: context.user._id });
+      if (context.profile) {
+        return Profile.findOneAndDelete({ _id: context.profile._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
     // Make it so a logged in user can only remove a skill from their own profile
-    removeTrail: async (parent, { trail }, context) => {
-      if (context.user) {
+    removeTrail: async (parent, { profileId, trail }, context) => {
+      if (context.profile) {
         return Profile.findOneAndUpdate(
-          { _id: context.user._id },
+          { _id: profileId },
           { $pull: { trails: trail } },
           { new: true }
         );
