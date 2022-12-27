@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
@@ -13,6 +13,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  // const [signUp, setSignUp] = useState({email, username, password})
   return (
     <ApolloProvider client={client}>
       <Router>
