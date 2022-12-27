@@ -1,1 +1,8 @@
-css
+/* css */
+
+body {
+    background: transparent;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+}

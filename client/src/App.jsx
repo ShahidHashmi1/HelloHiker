@@ -1,9 +1,11 @@
-// fix this page
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import Trails from './pages/Trails';
+import Users from './pages/Users';
+import SignIn from './pages/SignIn';
+import Nav from './components/Nav/Nav';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -14,22 +16,33 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
+          <Nav />
 
+          <Routes>
             <Route 
               path="/" 
               element={<Home />}
             />
-          
+
             <Route 
-              path="*"
-              element={<NotFound />}
+              path="/Trails" 
+              element={<Trails />}
+            />
+
+            <Route 
+              path="/Users" 
+              element={<Users />}
+            />
+
+            <Route 
+              path="/SignIn" 
+              element={<SignIn />}
             />
           </Routes>
-        </div>
+        
       </Router>
     </ApolloProvider>
+
   );
 }
 
