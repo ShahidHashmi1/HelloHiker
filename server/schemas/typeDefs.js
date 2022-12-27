@@ -38,7 +38,7 @@ login(email: String!, password: String): Auth
 addUser(name: String!, email: String!, password: String!): Auth
 removeProfile(name: String!, email: String!, password: String!): Auth
 addTrail(profileId: ID!, trail: Trail): Profile
-removeTrail(profileId: ID!): Profile
+removeTrail(profileId: ID!, trail: Trail): Profile
 }
 `;
 
