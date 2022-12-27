@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Trails } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -13,8 +13,8 @@ const resolvers = {
     },
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
-      if (context.user) {
-        return Profile.findOne({ _id: context.user._id });
+      if (context.profile) {
+        return Profile.findOne({ _id: context.profile._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -47,7 +47,7 @@ const resolvers = {
     // Add a third argument to the resolver to access data in our `context`
     addTrail: async (parent, { profileId, trail }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
-      if (context.user) {
+      if (context.profile) {
         return Profile.findOneAndUpdate(
           { _id: profileId },
           {
@@ -55,7 +55,6 @@ const resolvers = {
           },
           {
             new: true,
-            runValidators: true,
           }
         );
       }
@@ -63,17 +62,17 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     // Set up mutation so a logged in user can only remove their profile and no one else's
-    removeProfile: async (parent, args, context) => {
-      if (context.user) {
-        return Profile.findOneAndDelete({ _id: context.user._id });
+    removeProfile: async (parent, {profileId}, context) => {
+      if (context.profile) {
+        return Profile.findOneAndDelete({ _id: profileId });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
     // Make it so a logged in user can only remove a skill from their own profile
-    removeTrail: async (parent, { trail }, context) => {
-      if (context.user) {
+    removeTrail: async (parent, { profileId, trail }, context) => {
+      if (context.profile) {
         return Profile.findOneAndUpdate(
-          { _id: context.user._id },
+          { _id: profileId },
           { $pull: { trails: trail } },
           { new: true }
         );
