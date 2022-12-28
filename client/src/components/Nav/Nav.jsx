@@ -3,17 +3,20 @@ import SideNav, {Toggle, NavItem, NavIcon, NavText} from '@trendmicro/react-side
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import './nav.css'
 import { useNavigate } from 'react-router-dom';
-// import {FaHome} from 'react/icons-fa';
-// import {FaHiking} from 'react/icons-fa';
-// import {GiMountainRoad} from 'react/icons-gi';
+import {AiOutlineHome} from 'react-icons/ai'
+import {GiTrail} from 'react-icons/gi'
+import {BsFillPeopleFill} from 'react-icons/bs'
+import {BiLogIn} from 'react-icons/bi'
+
+
 
 const Nav = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <SideNav
-      onSelect={selected => {
-        console.log(selected);
-        // navigate(`/${selected}`)
+      onSelect={(selected) => {
+        console.log('selected', selected);
+        navigate('/'+selected)
       }}
       className='navStyle'
     >
@@ -22,28 +25,28 @@ const Nav = () => {
 
         <NavItem>
           <NavIcon>
-            {/* <FaHome /> */}
+            <AiOutlineHome />
           </NavIcon>
           <NavText>Home</NavText>
         </NavItem>
         
         <NavItem>
           <NavIcon>
-            {/* <GiMountainRoad/> */}
+            <GiTrail />
           </NavIcon>
           <NavText>Trails</NavText>
         </NavItem>
 
         <NavItem>
           <NavIcon>
-            {/* <FaHiking/> */}
+            <BsFillPeopleFill />
           </NavIcon>
           <NavText>Users</NavText>
         </NavItem>
 
         <NavItem>
           <NavIcon>
-            {/* icon */}
+            <BiLogIn />
           </NavIcon>
           <NavText>SignIn</NavText>
         </NavItem>
