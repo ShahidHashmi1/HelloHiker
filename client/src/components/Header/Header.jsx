@@ -1,8 +1,11 @@
 import React from 'react'
+import titleImg from '../../Images/HelloHiker-title.png'
 
 const Header = () => {
   return (
-    <h1>HELLOHIKER 🥾 </h1>
+    <div className='titleDiv'>
+      <img className='titleImg' src={titleImg} />
+    </div>
   )
 }
 

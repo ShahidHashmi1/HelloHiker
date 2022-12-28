@@ -3,6 +3,13 @@
 body {
     background: transparent;
     background-color: var(--secondary-color);
-    display: flex;
+}
+
+/* .titleImg {
     justify-content: center;
+} */
+
+.titleDiv {
+    display: flex;
+    align-items: center;
 }
