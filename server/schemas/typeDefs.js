@@ -10,14 +10,14 @@ type Profile {
 
 type Trails {
     name: String!
-    description: String!
+    description: String
     image: String
     link: String
 }
 
 input Trail {
     name: String!
-    description: String!
+    description: String
     image: String
     link: String
 }
