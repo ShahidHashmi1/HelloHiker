@@ -7,6 +7,7 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {GiTrail} from 'react-icons/gi'
 import {BsFillPeopleFill} from 'react-icons/bs'
 import {BiLogIn} from 'react-icons/bi'
+import Signup from '../Signup/Signup';
 
 
 
@@ -50,6 +51,14 @@ const Nav = () => {
           </NavIcon>
           <NavText>SignIn</NavText>
         </NavItem>
+
+        <NavItem>
+          <NavIcon>
+            <BiLogIn />
+          </NavIcon>
+          <NavText>SignUp</NavText>
+        </NavItem>
+
 
       </SideNav.Nav>
     </SideNav>

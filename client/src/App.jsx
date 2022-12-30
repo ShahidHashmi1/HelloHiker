@@ -6,6 +6,7 @@ import Trails from './pages/Trails';
 import Users from './pages/Users';
 import SignIn from './pages/SignIn';
 import Nav from './components/Nav/Nav';
+import SignUp from "./pages/SignUp"
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -38,6 +39,11 @@ function App() {
             <Route 
               path="/SignIn" 
               element={<SignIn />}
+            />
+
+             <Route 
+              path="/SignUp" 
+              element={<SignUp />}
             />
           </Routes>
         
