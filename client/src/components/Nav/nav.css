@@ -5,6 +5,19 @@
     color: var(--light-varient);
 }
 
+.iconSize {
+    font-size: 1.8rem;
+}
+
+.navText {
+    font-size: 1.8rem;
+}
+
+.navItem {
+    margin: .5rem;
+    padding: .65rem;
+}
+
 
 /* .sidenavClosed {
     composes: sidenav;

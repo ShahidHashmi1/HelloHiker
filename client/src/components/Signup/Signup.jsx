@@ -53,7 +53,7 @@ const Signup = () => {
           <input
             name="email"
             type="email"
-            value={this.profileData.email}
+            value={profileData.email}
             onChange={handleInputChange}
           />
         </label>
@@ -62,7 +62,7 @@ const Signup = () => {
           <input
             name="name"
             type="text"
-            value={this.profileData.name}
+            value={profileData.name}
             onChange={handleInputChange}
           />
         </label>
@@ -71,7 +71,7 @@ const Signup = () => {
           <input
             name="password"
             type="password"
-            value={this.profileData.password}
+            value={profileData.password}
             onChange={handleInputChange}
           />
         </label>

@@ -7,6 +7,7 @@ import {AiOutlineHome} from 'react-icons/ai'
 import {GiTrail} from 'react-icons/gi'
 import {BsFillPeopleFill} from 'react-icons/bs'
 import {BiLogIn} from 'react-icons/bi'
+import {AiOutlineLogin} from 'react-icons/ai'
 import Signup from '../Signup/Signup';
 
 
@@ -15,7 +16,7 @@ const Nav = () => {
   const navigate = useNavigate();
   return (
     <SideNav
-      onSelect={(selected) => {
+      onSelect={selected => {
         console.log('selected', selected);
         navigate('/'+selected)
       }}
@@ -24,39 +25,39 @@ const Nav = () => {
       <SideNav.Toggle />
       <SideNav.Nav defaultSelected="home">
 
-        <NavItem>
+        <NavItem className='.navItem'>
           <NavIcon>
-            <AiOutlineHome />
+            <AiOutlineHome className='iconSize' />
           </NavIcon>
-          <NavText>Home</NavText>
+          <NavText className='navText'>Home</NavText>
         </NavItem>
         
-        <NavItem>
+        <NavItem className='.navItem'>
           <NavIcon>
-            <GiTrail />
+            <GiTrail className='iconSize' />
           </NavIcon>
-          <NavText>Trails</NavText>
+          <NavText className='navText'>Trails</NavText>
         </NavItem>
 
-        <NavItem>
+        <NavItem className='.navItem'>
           <NavIcon>
-            <BsFillPeopleFill />
+            <BsFillPeopleFill className='iconSize' />
           </NavIcon>
-          <NavText>Users</NavText>
+          <NavText className='navText'>Users</NavText>
         </NavItem>
 
-        <NavItem>
+        <NavItem className='.navItem'>
           <NavIcon>
-            <BiLogIn />
+            <BiLogIn className='iconSize' />
           </NavIcon>
-          <NavText>SignIn</NavText>
+          <NavText className='navText'>SignIn</NavText>
         </NavItem>
 
-        <NavItem>
+        <NavItem className='.navItem'>
           <NavIcon>
-            <BiLogIn />
+            <AiOutlineLogin className='iconSize' />
           </NavIcon>
-          <NavText>SignUp</NavText>
+          <NavText className='navText'>SignUp</NavText>
         </NavItem>
 
 
