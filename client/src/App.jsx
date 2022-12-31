@@ -1,5 +1,6 @@
 import {React, useState} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { Switch } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Trails from './pages/Trails';
@@ -21,6 +22,9 @@ function App() {
           <Nav />
 
           <Routes>
+
+            {/* <Switch> */}
+
             <Route 
               path="/" 
               element={<Home />}
@@ -41,10 +45,13 @@ function App() {
               element={<SignIn />}
             />
 
-             <Route 
+            <Route 
               path="/SignUp" 
               element={<SignUp />}
             />
+
+            {/* </Switch> */}
+
           </Routes>
         
       </Router>
