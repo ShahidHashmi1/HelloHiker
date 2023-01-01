@@ -30,7 +30,7 @@ const Nav = () => {
         <SideNav.Toggle />
         <SideNav.Nav defaultSelected="home">
 
-          <NavItem eventKey='Home' className='.navItem'>
+          <NavItem eventKey='' className='.navItem'>
               <NavIcon>
                 <AiOutlineHome className='iconSize' />
               </NavIcon>
