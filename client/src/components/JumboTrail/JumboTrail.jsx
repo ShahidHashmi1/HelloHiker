@@ -5,10 +5,12 @@ import trailImg from '../../Images/trailPic.avif'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 // import Button from 'react-bootstrap/Button';
 // import Container from 'react-bootstrap/Container'
+import Header from '../Header/Header';
 
 
 const JumboTrail = () => {
   return (
+    <Header />
     <>
     
     <Jumbotron>

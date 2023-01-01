@@ -4,7 +4,7 @@ import Auth from '../utils/auth';
 import { saveTrailIds, getSavedTrailIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { ADD_TRAIL } from '../utils/mutations';
-import { trailData } from '../components/Trails/trailData';
+import trailData from '../components/Trails/trailData';
 
 const SearchTrails = () => {
   const [searchTrails, setSearchedTrails] = useState([]);
@@ -59,20 +59,11 @@ const SearchTrails = () => {
   };
 
   return (
-    <>
-
-
-    
-    </>
+    <div>
+      <h1>TRAILTEST</h1>
+    </div>
   )
 }
-
-
-
-
-
-
-
 
 
 export default SearchTrails

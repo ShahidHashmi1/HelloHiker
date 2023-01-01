@@ -2,7 +2,7 @@ import { React, useState }from 'react';
 import SideNav, {Toggle, NavItem, NavIcon, NavText} from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import './nav.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import {AiOutlineHome} from 'react-icons/ai'
 import {GiTrail} from 'react-icons/gi'
 import {BsFillPeopleFill} from 'react-icons/bs'
@@ -17,9 +17,12 @@ const Nav = () => {
   return (
     <SideNav
       onSelect={selected => {
-        console.log('selected', selected);
+        console.log('selected is....', selected);
         navigate('/'+selected)
       }}
+      // onSelect={selected => {
+      //   <NavLink to={`/${selected}`}
+      // }}
       className='navStyle'
     >
       <SideNav.Toggle />
