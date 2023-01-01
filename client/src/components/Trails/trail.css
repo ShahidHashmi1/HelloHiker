@@ -1,0 +1,9 @@
+.trail-container {
+    background: var(--light-varient #A3B18A);
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 60px;
+    padding-bottom: 5rem
+}
