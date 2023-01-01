@@ -4,7 +4,8 @@ import Auth from '../utils/auth';
 import { saveTrailIds, getSavedTrailIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
 import { ADD_TRAIL } from '../utils/mutations';
-import trailData from '../components/Trails/trailData';
+import trailData from '../components/Trails/trailData'; 
+import TrailCard from '../components/Trails/trailCard';
 
 const SearchTrails = () => {
   const [searchTrails, setSearchedTrails] = useState([]);
@@ -59,9 +60,15 @@ const SearchTrails = () => {
   };
 
   return (
-    <div>
-      <h1>TRAILTEST</h1>
-    </div>
+    <div className='trail-container'>
+      <div className='card-container'>
+        <TrailCard {...trailData[0]}/>
+        <TrailCard {...trailData[1]}/>
+        <TrailCard {...trailData[2]}/>
+        <TrailCard {...trailData[3]}/>
+      </div>
+      
+    </div>  
   )
 }
 

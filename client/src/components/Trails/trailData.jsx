@@ -1,19 +1,18 @@
-import React from 'react'
+import trail1 from '../../Images/trail1.png';
+import trail2 from '../../Images/trail2.png';
 
-const trailData = () => {
-  return (
-    trailData = [
+   const trailData = [
         {
             name: 'trail1',
             description: 'description of trail1',
             link: 'http://www.trail1.com',
-            image: 'blob'
+            image: trail1
         },
         {
             name: 'trail2',
             description: 'description of trail2',
             link: 'http://www.trail2.com',
-            image: 'blob'
+            image: trail2
         },
         {
             name: 'trail3',
@@ -23,7 +22,6 @@ const trailData = () => {
         },
         
     ]
-  )
-}
+  
 
-export default trailData
+export default trailData 
