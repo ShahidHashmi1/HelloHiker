@@ -10,62 +10,68 @@ import {BiLogIn} from 'react-icons/bi'
 import {AiOutlineLogin} from 'react-icons/ai'
 import Signup from '../Signup/Signup';
 
-
-
+// const LinkTo = NavLink();
+// 
 const Nav = () => {
   const navigate = useNavigate();
   return (
-    <SideNav
-      onSelect={selected => {
-        console.log('selected is....', selected);
-        navigate('/'+selected)
-      }}
-      // onSelect={selected => {
-      //   <NavLink to={`/${selected}`}
-      // }}
-      className='navStyle'
-    >
-      <SideNav.Toggle />
-      <SideNav.Nav defaultSelected="home">
+    <div className='parentDiv'>
+      <SideNav
+        onSelect={(selected) => {
+          console.log('Page Selected:', selected);
+          navigate('/'+selected)
+        }}
+        // onSelect={} => {
+        //   LinkTo = {`/${SideNav.Nav.name}`}
+        // }
 
-        <NavItem className='.navItem'>
-          <NavIcon>
-            <AiOutlineHome className='iconSize' />
-          </NavIcon>
-          <NavText className='navText'>Home</NavText>
-        </NavItem>
-        
-        <NavItem className='.navItem'>
-          <NavIcon>
-            <GiTrail className='iconSize' />
-          </NavIcon>
-          <NavText className='navText'>Trails</NavText>
-        </NavItem>
+        className='navStyle'
+      >
+        <SideNav.Toggle />
+        <SideNav.Nav defaultSelected="home">
 
-        <NavItem className='.navItem'>
-          <NavIcon>
-            <BsFillPeopleFill className='iconSize' />
-          </NavIcon>
-          <NavText className='navText'>Users</NavText>
-        </NavItem>
+          <NavItem eventKey='Home' className='.navItem'>
+              <NavIcon>
+                <AiOutlineHome className='iconSize' />
+              </NavIcon>
+              <NavText className='navText'>Home</NavText>
+          </NavItem>
+          
+          <NavItem eventKey='Trails' className='.navItem'>
+            {/* <NavLink to='Trails'> */}
+              <NavIcon>
+                <GiTrail className='iconSize' />
+              </NavIcon>
+              <NavText className='navText'>Trails</NavText>
+            {/* </NavLink> */}
+          </NavItem>
 
-        <NavItem className='.navItem'>
-          <NavIcon>
-            <BiLogIn className='iconSize' />
-          </NavIcon>
-          <NavText className='navText'>SignIn</NavText>
-        </NavItem>
+          <NavItem eventKey='Users' className='.navItem'>
+            <NavIcon>
+              <BsFillPeopleFill className='iconSize' />
+            </NavIcon>
+            <NavText className='navText'>Users</NavText>
+          </NavItem>
 
-        <NavItem className='.navItem'>
-          <NavIcon>
-            <AiOutlineLogin className='iconSize' />
-          </NavIcon>
-          <NavText className='navText'>SignUp</NavText>
-        </NavItem>
+          <NavItem eventKey='SignIn' className='.navItem'>
+            <NavIcon>
+              <BiLogIn className='iconSize' />
+            </NavIcon>
+            <NavText className='navText'>SignIn</NavText>
+          </NavItem>
+
+          <NavItem eventKey='SignUp' className='.navItem'>
+            <NavIcon>
+              <AiOutlineLogin className='iconSize' />
+            </NavIcon>
+            <NavText className='navText'>SignUp</NavText>
+          </NavItem>
 
 
-      </SideNav.Nav>
-    </SideNav>
+        </SideNav.Nav>
+      </SideNav>
+      
+      </div>
   )
 }
 
