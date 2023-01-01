@@ -2,14 +2,22 @@
 
 body {
     background: transparent;
-    background-color: var(--secondary-color);
-}
+    background-color: var(--light-varient);
+} 
 
-/* .titleImg {
-    justify-content: center;
-} */
+.titleImg { 
+    width: 16rem;
+    height: auto;
+}
 
 .titleDiv {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    margin-top: 0;
 }
+
+/* .hh-text h1 {
+    color: var(--primary-color);
+    display: inline-flexbox;
+} */
