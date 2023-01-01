@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import Userfront from "@userfront/core";
 import { ADD_USER } from "../../utils/mutations";
 
-// import Auth from "../../utils/";
+import Auth from '../../utils/auth';
 
 Userfront.init();
 
@@ -19,10 +19,8 @@ const Signup = () => {
 
   const handleInputChange = (e) => {
     e.preventDefault();
-    const target = e.target;
-    setprofileData({
-      [target.name]: target.value,
-    });
+    const {name, value}= e.target;
+    setprofileData({...profileData, [name]: value });
   };
 
  const handleSubmit = async (e) => {
@@ -37,10 +35,10 @@ const Signup = () => {
     });
 
     try {
-      const data = await addUser({
+      const {data} = await addUser({
         variables: { ...profileData },
       });
-      // Auth.login(data.addUser.token);
+      Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
     }
