@@ -1,8 +1,11 @@
 import React from 'react'
+import '../components/Users/users.css'
 
 const Users = () => {
   return (
-    <div>Users</div>
+      <div className='titleDiv'>
+        <h2>Users Page</h2>
+      </div>
   )
 }
 
