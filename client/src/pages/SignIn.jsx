@@ -6,7 +6,6 @@ const SignIn = () => {
 
   return (
     <>
-    <Header />
     <Signin />
     </>
   )
