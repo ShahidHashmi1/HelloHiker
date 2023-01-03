@@ -17,8 +17,13 @@ import Header from './components/Header/Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
+    <section>
+      <Header />
+    </section>
+
+    <section>
     <App />
+    </section>
   </React.StrictMode>,
   document.getElementById('root')
   // ,() => { alert('page successfully rendered')}
