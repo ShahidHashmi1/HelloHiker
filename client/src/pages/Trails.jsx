@@ -65,9 +65,7 @@ const SearchTrails = () => {
         <TrailCard {...trailData[0]}/>
         <TrailCard {...trailData[1]}/>
         <TrailCard {...trailData[2]}/>
-        <TrailCard {...trailData[3]}/>
       </div>
-      
     </div>  
   )
 }
