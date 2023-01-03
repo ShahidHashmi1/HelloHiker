@@ -1,9 +1,37 @@
-.trail-container {
-    background: var(--light-varient #A3B18A);
+.card-container {
     max-width: 1140px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
+    /* grid-template-columns: 20% 15% 20%; */
     grid-gap: 60px;
-    padding-bottom: 5rem
+    padding-bottom: 5rem;
+}
+
+.trail-card {
+    background: var(--light-color);
+    padding: 1.2rem 1rem;
+
+}
+
+.trail-card img {
+    width: 100%;
+}
+
+.trl-btns {
+    display: flex;
+    color: var(--secondary-color);
+    padding: 0.5rem 0;
+}
+
+.btn {
+    background: var(--secondary-color);
+}
+
+@media screen and (max-width: 740px) {
+    .card-container {
+        max-width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
 }
