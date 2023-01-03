@@ -44,7 +44,7 @@ const Signup = () => {
     }
   };
   return (
-    <div>
+    <div className="titleDiv">
       <form onSubmit={handleSubmit}>
         <label>
           Email
