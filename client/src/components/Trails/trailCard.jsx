@@ -8,6 +8,9 @@ const TrailCard = ({ name, description, image, link }) => {
             <h2 className="trail-name">{name}</h2>
             <div className="trail-details">
                 <p>{description}</p>
+                <div className="trl-btns">
+                    <a className="btn" href={link}>Link</a>
+                </div>
             </div>
         </div>
     )

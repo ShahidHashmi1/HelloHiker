@@ -1,5 +1,7 @@
-import trail1 from '../../Images/trail1.png';
-import trail2 from '../../Images/trail2.png';
+import trail1 from "../../Images/trailpics/trail1.jpg";
+import trail2 from "../../Images/trailpics/trail2.jpg";
+import trail3 from "../../Images/trailpics/trail3.jpg";
+
 
    const trailData = [
         {
@@ -18,7 +20,7 @@ import trail2 from '../../Images/trail2.png';
             name: 'trail3',
             description: 'description of trail3',
             link: 'http://www.trail3.com',
-            image: 'blob'
+            image: trail3
         },
         
     ]
