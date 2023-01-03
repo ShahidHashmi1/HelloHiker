@@ -11,11 +11,13 @@
 .trail-card {
     background: var(--light-color);
     padding: 1.2rem 1rem;
+    height: 100%;
 
 }
 
 .trail-card img {
     width: 100%;
+    height: auto;
 }
 
 .trl-btns {
@@ -27,6 +29,12 @@
 .btn {
     background: var(--secondary-color);
 }
+
+.trail-name {
+    padding: 1.1rem 0;
+}
+
+
 
 @media screen and (max-width: 740px) {
     .card-container {
