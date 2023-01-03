@@ -3,6 +3,7 @@ import { useState } from "react";
 import Userfront from "@userfront/core";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
+import Auth from '../../utils/auth';
 
 Userfront.init();
 
@@ -10,40 +11,39 @@ const Signin = () => {
   const [profileData, setprofileData] = useState({ email: "", password: "" });
   const [loginUser, { error, data }] = useMutation(LOGIN_USER);
 
-  handleInputChange = (e) => {
+  const handleInputChange = (e) => {
     e.preventDefault();
-    const target = e.target;
-    setprofileData({
-      [target.name]: target.value,
-    });
+    const {name, value}= e.target;
+    setprofileData({...profileData, [name]: value });
   };
 
-  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     Userfront.login({
       method: "password",
-      email: this.profileData.email,
-      password: this.profileData.password,
+      email: profileData.email,
+      password: profileData.password,
     });
     try {
-      const data = await loginUser({
+      const {data}= await loginUser({
         variables: { ...profileData },
       });
-    } catch {
+      Auth.login(data.login.profile.token);
+    } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <div>
-      <form onSubmit={this.handleSubmit}>
+    <div className="titleDiv">
+      <form onSubmit={handleSubmit}>
         <label>
           Email
           <input
             name="email"
-            type="text"
-            value={this.profileData.email}
-            onChange={this.handleInputChange}
+            type="email"
+            value={profileData.email}
+            onChange={handleInputChange}
           />
         </label>
         <label>
@@ -51,11 +51,11 @@ const Signin = () => {
           <input
             name="password"
             type="password"
-            value={this.profileData.password}
-            onChange={this.handleInputChange}
+            value={profileData.password}
+            onChange={handleInputChange}
           />
         </label>
-        <buttonv type="submit">Sign In!</buttonv>
+        <button type="submit">Sign In!</button>
       </form>
     </div>
   );
