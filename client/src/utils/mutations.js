@@ -48,3 +48,15 @@ mutation removeTrail($profileId: ID!){
     }
 }
 `;
+
+export const NEW_TRAIL = gql`
+    mutation newTrail($profileId: ID!){
+        newTrail(profileId: $profileId){
+            token
+            Trail {
+                _id
+                name
+            }
+        }
+    }
+    `;
