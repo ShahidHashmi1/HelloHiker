@@ -11,6 +11,8 @@
 }
 
 .titleDiv {
+    width: calc(100% - 4rem);
+    margin-left: 4rem;
     display: flex;
     justify-content: center;
     padding-top: 0;

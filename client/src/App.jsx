@@ -20,38 +20,30 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
           <Nav />
-
           <Routes>
 
             <Route 
               path="/" 
               element={<Home />}
             />
-
             <Route 
               path="/Trails" 
               element={<Trails />}
             />
-
             <Route 
               path="/Users" 
               element={<Users />}
             />
-
             <Route 
               path="/SignIn" 
               element={<SignIn />}
             />
-
             <Route 
               path="/SignUp" 
               element={<SignUp />}
             />
-
             {/* </Switch> */}
-
           </Routes>
-        
       </Router>
     </ApolloProvider>
 
