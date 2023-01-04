@@ -6,6 +6,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_TRAIL } from '../utils/mutations';
 import trailData from '../components/Trails/trailData'; 
 import TrailCard from '../components/Trails/trailCard';
+import SearchBar from '../components/SearchBar/SearchBar'
 
 const SearchTrails = () => {
   const [searchTrails, setSearchedTrails] = useState([]);
@@ -60,13 +61,16 @@ const SearchTrails = () => {
   };
 
   return (
+    <>
+    <SearchBar/>
     <div className='trail-container'>
       <div className='card-container'>
         <TrailCard {...trailData[0]}/>
         <TrailCard {...trailData[1]}/>
         <TrailCard {...trailData[2]}/>
       </div>
-    </div>  
+    </div> 
+     </>
   )
 }
 
