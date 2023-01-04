@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const trailSchema = require('./Trails');
+const Trails = require('./Trails')
 
 const profileSchema = new Schema({
     name: {
@@ -19,7 +19,7 @@ const profileSchema = new Schema({
         required: true,
         minlength: 5,
     },
-    trails: [trailSchema],
+    trails: [{type: Schema.Types.ObjectId, ref: "Trails"}],
 });
 
 // set up pre-save middleware to create password

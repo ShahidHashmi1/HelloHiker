@@ -21,8 +21,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { name, email, password }) => {
-      const profile = await Profile.create({ name, email, password });
+    addUser: async (parent, args) => {
+      const profile = await Profile.create( args );
       const token = signToken(profile);
 
       return { token, profile };
@@ -79,6 +79,14 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+
+    newTrail: async (parent, args, context) => {
+      if (context.profile) {
+      const trail = await Trails.create(args)
+      return trail;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    }
   },
 };
 

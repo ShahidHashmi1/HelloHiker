@@ -16,6 +16,7 @@ import Auth from '../../utils/auth'
 // 
 const Nav = () => {
   const navigate = useNavigate();
+  console.log('Auth.loggedIn()', Auth.loggedIn())
   return (
     <div className='parentDiv'>
       <SideNav
@@ -54,16 +55,13 @@ const Nav = () => {
             <NavText className='navText'>Users</NavText>
           </NavItem>
 
-
-          <NavItem eventKey='SignIn' className='navItem'>
-
           
           {Auth.loggedIn() ? 
             <NavItem onClick={Auth.logout} eventKey='' className='navItem'>
             <NavIcon>
               <BiLogOut className='iconSize' />
             </NavIcon>
-            <NavText className='navText'>logout</NavText>
+            <NavText className='navText'>Logout</NavText>
           </NavItem>
           : 
             
@@ -75,11 +73,8 @@ const Nav = () => {
           </NavItem>
           
 }
-
-          <NavItem eventKey='SignUp' className='navItem'>
-
           
-          {!Auth.loggedIn() ? 
+          {!Auth.loggedIn() && 
             <NavItem eventKey='SignUp' className='navItem'>
 
             <NavIcon>
@@ -87,19 +82,7 @@ const Nav = () => {
             </NavIcon>
             <NavText className='navText'>SignUp</NavText>
           </NavItem>
-          :
-
-          <NavItem eventKey='SignIn' className='navItem'>
-            <NavIcon>
-              <BiLogIn className='iconSize' />
-            </NavIcon>
-            <NavText className='navText'>SignIn</NavText>
-          </NavItem>
 }
-          </NavItem>
-          </NavItem>
-
-
         </SideNav.Nav>
       </SideNav>
       

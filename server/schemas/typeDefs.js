@@ -39,6 +39,7 @@ addUser(name: String!, email: String!, password: String!): Auth
 removeProfile(name: String!, email: String!, password: String!): Auth
 addTrail(profileId: ID!, trail: Trail): Profile
 removeTrail(profileId: ID!, trail: Trail): Profile
+newTrail(name: String!, description: String, image: String, link: String): Trails
 }
 `;
 

@@ -6,7 +6,7 @@ const trailSchema = new Schema({
         required: true, 
         unique: true,
     },
-   description: {
+    description: {
         type: String,
     },
     image: {
@@ -19,4 +19,4 @@ const trailSchema = new Schema({
 
 const Trails = model('Trails', trailSchema);
 
-module.export = Trails;
+module.exports = Trails;
