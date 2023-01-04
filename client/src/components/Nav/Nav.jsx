@@ -59,13 +59,13 @@ const Nav = () => {
 
           
           {Auth.loggedIn() ? 
-             <NavItem onClick={Auth.logout} eventKey='' className='navItem'>
-             <NavIcon>
-               <BiLogOut className='iconSize' />
-             </NavIcon>
-             <NavText className='navText'>logout</NavText>
-           </NavItem>
-           : 
+            <NavItem onClick={Auth.logout} eventKey='' className='navItem'>
+            <NavIcon>
+              <BiLogOut className='iconSize' />
+            </NavIcon>
+            <NavText className='navText'>logout</NavText>
+          </NavItem>
+          : 
             
             <NavItem eventKey='SignIn' className='navItem'>
             <NavIcon>
