@@ -8,17 +8,17 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Header from '../Header/Header';
 
 
-const JumboTrail = () => {
-  return (
-    <Header />
-    <>
+// const JumboTrail = () => {
+//   return (
+//     <Header />
+//     <>
     
-    <Jumbotron>
-        <img className='trailPic' src={trailImg} />
-    </Jumbotron>
+//     <Jumbotron>
+//         <img className='trailPic' src={trailImg} />
+//     </Jumbotron>
     
-    </>
-  )
-}
+//     </>
+//   )
+// }
 
-export default JumboTrail
+// export default JumboTrail

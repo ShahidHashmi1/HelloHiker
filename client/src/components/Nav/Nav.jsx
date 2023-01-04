@@ -68,18 +68,17 @@ const Nav = () => {
            : 
             
             <NavItem eventKey='SignIn' className='navItem'>
-
             <NavIcon>
               <BiLogIn className='iconSize' />
             </NavIcon>
             <NavText className='navText'>SignIn</NavText>
           </NavItem>
           
-
+}
 
           <NavItem eventKey='SignUp' className='navItem'>
 
-          }
+          
           {!Auth.loggedIn() ? 
             <NavItem eventKey='SignUp' className='navItem'>
 
@@ -89,22 +88,16 @@ const Nav = () => {
             <NavText className='navText'>SignUp</NavText>
           </NavItem>
           :
-          null
-          }
 
-          {/* <NavItem eventKey='SignIn' className='navItem'>
+          <NavItem eventKey='SignIn' className='navItem'>
             <NavIcon>
               <BiLogIn className='iconSize' />
             </NavIcon>
             <NavText className='navText'>SignIn</NavText>
           </NavItem>
-
-          <NavItem eventKey='SignUp' className='navItem'>
-            <NavIcon>
-              <AiOutlineLogin className='iconSize' />
-            </NavIcon>
-            <NavText className='navText'>SignUp</NavText>
-          </NavItem> */}
+}
+          </NavItem>
+          </NavItem>
 
 
         </SideNav.Nav>
