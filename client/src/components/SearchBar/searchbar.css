@@ -3,10 +3,22 @@
     justify-content: center;
     padding-top:10px;
     padding-bottom:5px;
+    background-color: var(--light-varient);
 }
 
   .active-pink-3 input[type="text"] {
     border: 1px solid #588157;
     box-shadow: 0 0 0 1px #588157;
   }
+
+.search-btn {
+  background-color: var(--primary-color);
+  transition: ease(0.3s);
+  display: inline-block;
+}
+
+.search-btn:hover {
+  opacity: 0.8;
+}
+
 
