@@ -1,4 +1,4 @@
-import "../Trails/trail.css";
+import "./trail.css";
 import React from "react";
 
 const TrailCard = ({ name, description, image, link }) => {
@@ -9,10 +9,14 @@ const TrailCard = ({ name, description, image, link }) => {
             <div className="trail-details">
                 <p>{description}</p>
                 <div className="trl-btns">
-                    <a className="btn" href={link}>Link</a>
+                    <a className="btn" href={link}>More Info Here</a>
                 </div>
             </div>
+
+            <p className="disclaimerTxt">Information courtesy of <a href="https://https://www.tripstodiscover.com/">tripstodiscover.com</a></p>
+
         </div>
+        
     )
 }
 

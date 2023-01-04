@@ -3,7 +3,7 @@ import { Jumbotrol, Container, Col, Form, Button, Card, CardColumns } from 'reac
 import Auth from '../utils/auth';
 import { saveTrailIds, getSavedTrailIds } from '../utils/localStorage';
 import { useMutation } from '@apollo/client';
-import { ADD_TRAIL } from '../utils/mutations';
+import { ADD_TRAIL, REMOVE_TRAIL, NEW_TRAIL } from '../utils/mutations';
 import trailData from '../components/Trails/trailData'; 
 import TrailCard from '../components/Trails/trailCard';
 import SearchBar from '../components/SearchBar/SearchBar'
@@ -14,6 +14,7 @@ const SearchTrails = () => {
   const [saveTrailIds, setSavedTrailIds] = useState(getSavedTrailIds());
 
   const [addTrail, { error }] = useMutation(ADD_TRAIL);
+  
 
   useEffect(() => {
     return () => setSavedTrailIds(saveTrailIds);
@@ -41,6 +42,8 @@ const SearchTrails = () => {
     }
   };
 
+  // const [newTrail, { error }] = useMutation(NEW_TRAIL);
+
   const handleSaveTrails = async (trailId) => {
     const trailToSave = searchTrails.find((trails) => trails.trailId === trailId);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -60,6 +63,27 @@ const SearchTrails = () => {
     }
   };
 
+  const trailResults = [];
+
+  // const trailData.forEach((trail, index) => {
+  //   trailResults.push(
+  //     <div key={index}>
+  //       <TrailCard />
+  //     </div>,
+  //   );
+  // });
+
+  // <div>
+  //   {trailData.map((trail, index) => {
+  //     return (
+  //       <div key={index}>
+  //         <TrailCard />
+  // </div>
+  //     )
+  //   })}
+
+  
+
   return (
     <>
     <SearchBar/>
@@ -68,9 +92,11 @@ const SearchTrails = () => {
         <TrailCard {...trailData[0]}/>
         <TrailCard {...trailData[1]}/>
         <TrailCard {...trailData[2]}/>
+        <TrailCard {...trailData[3]}/>
+        <TrailCard {...trailData[4]}/>
+        <TrailCard {...trailData[5]}/>
       </div>
-    </div> 
-     </>
+
   )
 }
 
