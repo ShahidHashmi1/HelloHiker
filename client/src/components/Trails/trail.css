@@ -1,6 +1,7 @@
 .trail-container {
     width: calc(100% - 4rem);
     margin-left: 4rem;
+    background: var(--secondary-color);
 }
 
 .card-container {
