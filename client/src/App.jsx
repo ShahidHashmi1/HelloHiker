@@ -21,7 +21,7 @@ function App() {
       <Router>
           <Nav />
           <Routes>
-            {/* <Switch> */}
+
             <Route 
               path="/" 
               element={<Home />}

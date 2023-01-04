@@ -40,12 +40,11 @@ const Nav = () => {
           </NavItem>
           
           <NavItem eventKey='Trails' className='navItem'>
-            {/* <NavLink to='Trails'> */}
+
               <NavIcon>
                 <GiTrail className='iconSize' />
               </NavIcon>
               <NavText className='navText'>Trails</NavText>
-            {/* </NavLink> */}
           </NavItem>
 
           <NavItem eventKey='Users' className='navItem'>
@@ -54,6 +53,10 @@ const Nav = () => {
             </NavIcon>
             <NavText className='navText'>Users</NavText>
           </NavItem>
+
+
+          <NavItem eventKey='SignIn' className='navItem'>
+
           
           {Auth.loggedIn() ? 
              <NavItem onClick={Auth.logout} eventKey='' className='navItem'>
@@ -65,6 +68,7 @@ const Nav = () => {
            : 
             
             <NavItem eventKey='SignIn' className='navItem'>
+
             <NavIcon>
               <BiLogIn className='iconSize' />
             </NavIcon>
@@ -72,9 +76,13 @@ const Nav = () => {
           </NavItem>
           
 
+
+          <NavItem eventKey='SignUp' className='navItem'>
+
           }
           {!Auth.loggedIn() ? 
             <NavItem eventKey='SignUp' className='navItem'>
+
             <NavIcon>
               <AiOutlineLogin className='iconSize' />
             </NavIcon>

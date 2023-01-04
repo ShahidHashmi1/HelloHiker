@@ -1,0 +1,68 @@
+/* css */
+
+.carousel-item {
+    text-align: center;
+}
+
+.bkg-carousel {
+    padding-top: 0;
+    margin-top: 0;
+    background: var(--secondary-color);
+    border: .24rem;
+    border-color: var(--light-varient);
+}
+
+.img-size {
+    width: 25rem;
+    margin: 0 auto;
+}
+
+h5 {
+    color: var(--light-varient);
+    text-shadow: 1px 1px 1px var(--primary-color);
+}
+
+.testiTxt {
+    padding: .6rem;
+    text-shadow: 1px 1px 1px var(--light-color);
+    color: var(--primary-color);
+    background-color: var(--light-color);
+    border-color: var(--secondary-color);
+    border-width: 0.7rem;
+    border-radius: 1.5rem;
+}
+
+#aboutNcarousel {
+    background: var(--secondary-color);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.aboutContent {
+    font-size: 1.2rem;
+    /* padding: .6rem; */
+    text-shadow: 1px 1px 1px var(--primary-color);
+    color: var(--light-varient);
+    margin-bottom: 1.5rem;
+}
+
+.aboutTitle {
+    font-size: 2.5rem;
+    padding: .6rem;
+    text-shadow: 2px 2px 2px black;
+    color: var(--light-varient);
+}
+
+.aboutSlide {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    padding-left: 3rem;
+    margin-right: 1.4rem;
+    /* padding-right: .9rem; */
+}
+
+.slides {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    /* gap: 30%; */
+}
