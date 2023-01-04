@@ -30,37 +30,35 @@ const Nav = () => {
         <SideNav.Toggle />
         <SideNav.Nav defaultSelected="home">
 
-          <NavItem eventKey='' className='.navItem'>
+          <NavItem eventKey='' className='navItem'>
               <NavIcon>
                 <AiOutlineHome className='iconSize' />
               </NavIcon>
               <NavText className='navText'>Home</NavText>
           </NavItem>
           
-          <NavItem eventKey='Trails' className='.navItem'>
-            {/* <NavLink to='Trails'> */}
+          <NavItem eventKey='Trails' className='navItem'>
               <NavIcon>
                 <GiTrail className='iconSize' />
               </NavIcon>
               <NavText className='navText'>Trails</NavText>
-            {/* </NavLink> */}
           </NavItem>
 
-          <NavItem eventKey='Users' className='.navItem'>
+          <NavItem eventKey='Users' className='navItem'>
             <NavIcon>
               <BsFillPeopleFill className='iconSize' />
             </NavIcon>
             <NavText className='navText'>Users</NavText>
           </NavItem>
 
-          <NavItem eventKey='SignIn' className='.navItem'>
+          <NavItem eventKey='SignIn' className='navItem'>
             <NavIcon>
               <BiLogIn className='iconSize' />
             </NavIcon>
             <NavText className='navText'>SignIn</NavText>
           </NavItem>
 
-          <NavItem eventKey='SignUp' className='.navItem'>
+          <NavItem eventKey='SignUp' className='navItem'>
             <NavIcon>
               <AiOutlineLogin className='iconSize' />
             </NavIcon>

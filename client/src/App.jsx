@@ -23,8 +23,6 @@ function App() {
 
           <Routes>
 
-            {/* <Switch> */}
-
             <Route 
               path="/" 
               element={<Home />}

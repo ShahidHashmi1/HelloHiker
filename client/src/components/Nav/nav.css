@@ -3,6 +3,7 @@
     font-size: 2.4rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--light-varient);
+    position: fixed;
 }
 
 .iconSize {
@@ -13,50 +14,7 @@
     font-size: 1.8rem;
 }
 
-.navItem {
+/* .navItem {
     margin: .5rem;
     padding: .65rem;
-}
-
-
-/* .sidenav {
-    width: 250px;
-    transition: width 0.3s ease-in-out;
-    height: 100vh;
-    background-color: var(--secondary-color);
-    padding-top: 28px;
-}
-
-.sideitem:hover {
-    background-color: var(--primary-color);
-    
 } */
-
-/* .sidenavClosed {
-    composes: sidenav;
-    transition: width 0.3s ease-in-out;
-    width: 60px
-}  */
-
-/* .menuBtn {
-    background-color: transparent;
-    padding-left: 20px;
-    border: none;
-    align-self: center;
-    align-self: flex-start;  
-    justify-self: flex-end;
-    cursor: pointer;
-    color: var(--light-color);
-}
-.sideitem {
-    color: var(--light-varient);
-    cursor: pointer;
-    text-decoration: none;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-}
-.linkText {
-    padding-left: 16px;
-}  */

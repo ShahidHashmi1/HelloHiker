@@ -20,3 +20,28 @@ body {
   padding-top: 0;
   margin-top: 0;
 }
+
+.mtnPic {
+  width: 100vw;
+}
+
+.mtn-container {
+  background-color: var(--light-varient);
+  padding-top: 0;
+  margin-top: 0;
+  position: relative;
+  text-align: left;
+  color: var(--light-color);
+}
+
+.txtPos {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  position: absolute;
+  font-size: 2.7rem;
+  top: 22%;
+  left: 45%;
+  transform: translate(-45%, -50%);
+  color: var(--light-varient);
+  text-shadow: 2px 2px 2px black;
+}

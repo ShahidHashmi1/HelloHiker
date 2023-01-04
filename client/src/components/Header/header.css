@@ -1,6 +1,6 @@
 /* css */
 
-body {
+#header {
     background: transparent;
     background-color: var(--light-varient);
 } 
@@ -15,4 +15,5 @@ body {
     justify-content: center;
     padding-top: 0;
     margin-top: 0;
+    /* margin-bottom: 2rem; */
 }
