@@ -15,7 +15,7 @@ const SearchTrails = () => {
   const [addTrail, { error }] = useMutation(ADD_TRAIL);
 
   useEffect(() => {
-    return () => setSaveTrailIds(saveTrailIds);
+    return () => setSavedTrailIds(saveTrailIds);
   }); 
 
   const handleFormSubmit = async (event) => {

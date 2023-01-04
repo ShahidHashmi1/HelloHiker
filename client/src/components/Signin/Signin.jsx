@@ -4,6 +4,7 @@ import Userfront from "@userfront/core";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import Auth from '../../utils/auth';
+import './signin.css'
 
 Userfront.init();
 
@@ -35,11 +36,11 @@ const Signin = () => {
   };
 
   return (
-    <div className="titleDiv">
-      <form onSubmit={handleSubmit}>
-        <label>
-          Email
-          <input
+    <div className="loginContainer">
+      <form onSubmit={handleSubmit} className="loginForm">
+        <label className="emailBox">
+          Email      
+          <input className="emailInput"
             name="email"
             type="email"
             value={profileData.email}
@@ -55,7 +56,7 @@ const Signin = () => {
             onChange={handleInputChange}
           />
         </label>
-        <button type="submit">Sign In!</button>
+        <button className="signinButton" type="submit">Sign In!</button>
       </form>
     </div>
   );
