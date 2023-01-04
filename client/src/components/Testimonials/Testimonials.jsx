@@ -24,7 +24,7 @@ function TestCarousel() {
                             <br/>
                             <h5>It is our hope to facilitate a community of users to meet other hikers in their area, and say hello!</h5>
                             <br/>
-                            <h5>We plan on continuing to develop and refine our application to help grow the community. If you havfe any input please reach out to us!</h5>
+                            <h5>We plan on continuing to develop and refine our application to help grow the community. If you have any input please reach out to us!</h5>
                         </div>
                     </div>
                 </article>

@@ -6,6 +6,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_TRAIL, REMOVE_TRAIL, NEW_TRAIL } from '../utils/mutations';
 import trailData from '../components/Trails/trailData'; 
 import TrailCard from '../components/Trails/trailCard';
+import SearchBar from '../components/SearchBar/SearchBar'
 
 const SearchTrails = () => {
   const [searchTrails, setSearchedTrails] = useState([]);
@@ -84,6 +85,8 @@ const SearchTrails = () => {
   
 
   return (
+    <>
+    <SearchBar/>
     <div className='trail-container'>
       <div className='card-container'>
         <TrailCard {...trailData[0]}/>
@@ -93,21 +96,7 @@ const SearchTrails = () => {
         <TrailCard {...trailData[4]}/>
         <TrailCard {...trailData[5]}/>
       </div>
-    </div>  
 
-  //   {employees.map((employee, index) => {
-  //     return (
-  //       <div key={index}>
-  //         <h2>name: {employee.name}</h2>
-  //         <h2>country: {employee.country}</h2>
-
-  //         <hr />
-  //       </div>
-  //     );
-  //   })}
-
-  //   {results}
-  // </div>
   )
 }
 
