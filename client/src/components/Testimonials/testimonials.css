@@ -63,6 +63,23 @@ h5 {
 
 .slides {
     display: grid;
-    grid-template-columns: 6fr 5fr;
+    grid-template-columns: 6fr 5fr; 
     /* gap: 30%; */
+}
+
+@media screen and (max-width: 640px) {
+    .carouselSlide {
+        display: inline-block;
+    }
+    .slides {
+        display: inline-block;
+        justify-content: center;
+    }
+    .aboutContent {
+        text-align: center;
+        padding-right: 1rem;
+    }
+    .aboutTitle {
+        padding-left: 2.5rem;
+    }
 }
