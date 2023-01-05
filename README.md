@@ -3,7 +3,7 @@
 ![img](client/src/Images/homepage.png)
 
 
-run from the deployed app at:  
+run from the deployed app at:  https://hellohiker.herokuapp.com/
 
 
 ## Description
