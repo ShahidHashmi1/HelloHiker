@@ -42,8 +42,6 @@ const SearchTrails = () => {
     }
   };
 
-  // const [newTrail, { error }] = useMutation(NEW_TRAIL);
-
   const handleSaveTrails = async (trailId) => {
     const trailToSave = searchTrails.find((trails) => trails.trailId === trailId);
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -64,29 +62,12 @@ const SearchTrails = () => {
   };
 
   const trailResults = [];
-
-  // const trailData.forEach((trail, index) => {
-  //   trailResults.push(
-  //     <div key={index}>
-  //       <TrailCard />
-  //     </div>,
-  //   );
-  // });
-
-  // <div>
-  //   {trailData.map((trail, index) => {
-  //     return (
-  //       <div key={index}>
-  //         <TrailCard />
-  // </div>
-  //     )
-  //   })}
-
   
-
   return (
     <>
+    
     <SearchBar/>
+
     <div className='trail-container'>
       <div className='card-container'>
         <TrailCard {...trailData[0]}/>
@@ -96,7 +77,9 @@ const SearchTrails = () => {
         <TrailCard {...trailData[4]}/>
         <TrailCard {...trailData[5]}/>
       </div>
+    </div>
 
+    </>
   )
 }
 
