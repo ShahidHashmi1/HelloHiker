@@ -2,7 +2,7 @@
 
 ![img](client/src/Images/homepage.png)
 
-run from the deployed app at:  
+run from the deployed app at:   
 
 ## Description
 A social media application for hikers and trail goers. You can search National Park trails throughout the US.  Allow users to create profiles which will store all trails they have hiked, ones they hope to complete in the future and all them to post, rank, and comment on them. Users can connect with other hikers using the app. 
