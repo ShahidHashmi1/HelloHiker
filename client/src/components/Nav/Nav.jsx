@@ -12,11 +12,9 @@ import {AiOutlineLogin} from 'react-icons/ai'
 import Signup from '../Signup/Signup';
 import Auth from '../../utils/auth'
 
-// const LinkTo = NavLink();
-// 
 const Nav = () => {
   const navigate = useNavigate();
-  console.log('Auth.loggedIn()', Auth.loggedIn())
+  console.log('Auth.loggedIn():', Auth.loggedIn())
   return (
     <div className='parentDiv'>
       <SideNav
@@ -24,9 +22,6 @@ const Nav = () => {
           console.log('Page Selected:', selected);
           navigate('/'+selected)
         }}
-        // onSelect={} => {
-        //   LinkTo = {`/${SideNav.Nav.name}`}
-        // }
 
         className='navStyle'
       >
