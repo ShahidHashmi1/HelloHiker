@@ -7,7 +7,7 @@ const SearchPage = () => {
         <div className='searchbar'>
       <MDBCol md="4">
         <div className="active-pink-3 active-pink-4 mb-4">
-          <input className="form-control" type="text" placeholder="Search Trails" aria-label="Search" />
+          <input className="form-control" type="text" placeholder="Searchbar feature coming soon!" aria-label="Search" />
         </div>
           <button className="search-btn">Search</button>
       </MDBCol>
